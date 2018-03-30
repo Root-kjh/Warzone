@@ -1,0 +1,17 @@
+button{
+	position: relative;
+	z-index: 9999;
+}
+.modal{
+	z-index: 9999;
+	color: #333;
+}
+.list-group{
+	position: relative;
+	z-index: 100;
+}
+
+.form-control{
+    position: relative;
+    z-index: 150;
+}

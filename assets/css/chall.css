@@ -1,0 +1,22 @@
+.list-group-item:not(#alert){
+-webkit-transition:color 2s, background-color 2s, -webkit-transform 2s;
+transition:color 2s, background-color 2s, transform 2s;
+}
+
+.list-group-item:hover:not(#alert) {
+    background-color: white;
+    color:black;
+}
+
+.form-control{
+    position: relative;
+    z-index: 150;
+}
+
+ul, .list-group-item{
+    z-index: 150;
+}
+
+.modal{
+    color: #333;
+}
