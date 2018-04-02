@@ -7,6 +7,7 @@ if($userinfo[0]==null){
 	header("location:/profile");
 }
 $chall=AllChall();
+$rank=Rank($id);
 foreach ($chall as $c) {
   foreach($solve as $s){
     if($s==$c)
@@ -57,6 +58,7 @@ foreach ($chall as $c) {
 				<?=$userinfo[1]?>
 			</div>
 		</div>
+	<h4><?="RANK : ".$rank[0]."/".$rank[1]?></h4>
 	<ul class="list-group">
 			  <?php
 			  $count=0;

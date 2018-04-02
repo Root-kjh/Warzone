@@ -3,7 +3,7 @@ session_start();
 $dsn = "mysql:host=localhost;port=3306;dbname=warzone;charset=utf8";
 
 try {
-    $con = new PDO($dsn, "DBid", "DBpw");
+    $con = new PDO($dsn, "DBID", "DBPW");
     $con->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
@@ -389,5 +389,22 @@ try {
             return true;
         else
             return false;
+    }
+    function Rank($id){
+	global $con;
+	$stmt=$con->prepare('select rank from users as T1, (select id,(@rank:=@rank+1) AS rank from users as a,(select @rank:=0) as b order by a.point desc) AS T2 where T1.id=T2.id and T1.id=:id;');
+	$stmt->bindParam(':id',$id,PDO::PARAM_STR);
+	$stmt->execute();
+	$row=$stmt->fetchAll(PDO::FETCH_NUM);
+	foreach($row as $r){
+	    $rank[0]=$r[0];
+	}
+	$st=$con->prepare('select count(*) from users');
+	$st->execute();
+	$row=$st->fetchAll(PDO::FETCH_NUM);
+	foreach($row as $r){
+	    $rank[1]=$r[0];
+	}
+	return $rank;
     }
 ?>

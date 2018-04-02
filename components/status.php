@@ -4,6 +4,7 @@ include './data/config.php';
 $userinfo=search($_SESSION['id']);
 $solve=solveList($_SESSION['id']);
 $chall=AllChall();
+$rank=Rank($_SESSION['id']);
 foreach ($chall as $c) {
   foreach($solve as $s){
     if($s==$c)
@@ -92,6 +93,7 @@ foreach ($chall as $c) {
 				<a data-toggle="modal" data-target="#myModal2"><button type="button" class="btn btn-default">Change Comment</button></a>
 			</div>
 		</div>
+<h4><?="RANK : ".$rank[0]."/".$rank[1]?></h4>
 	<ul class="list-group">
 			  <?php
 			  $count=0;
