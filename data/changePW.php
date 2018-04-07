@@ -3,7 +3,7 @@ require 'config.php';
 $id=$_SESSION['id'];
 $pw=hash('sha512',$_POST['pw']);
 $pwr=hash('sha512',$_POST['pwr']);
-if($pw===$pwr && isset($pw) && isset($pwr) && CheckPW($id,$pw)){
+if($pw===$pwr && isset($pw,$pwr) && CheckPW($id,$pw)){
     changePW($pw,$id);
     echo "<script>alert('변경완료');location.href='/status';</script>";
     die;

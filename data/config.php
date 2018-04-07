@@ -3,7 +3,7 @@ session_start();
 $dsn = "mysql:host=localhost;port=3306;dbname=warzone;charset=utf8";
 
 try {
-    $con = new PDO($dsn, "DBID", "DBPW");
+    $con = new PDO($dsn, "db_id", "db_pw");
     $con->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }

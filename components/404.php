@@ -11,10 +11,10 @@
     <title>Warzone</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://warzone.kro.kr/assets/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="../assets/css/cover.css" rel="stylesheet">
+    <link href="http://warzone.kro.kr/assets/css/cover.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -60,7 +60,7 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="../assets/js/bootstrap.min.js"></script>
-<script src="../assets/js/start.js" type="text/javascript"></script>
+    <script src="http://warzone.kro.kr/assets/js/bootstrap.min.js"></script>
+<script src="http://warzone.kro.kr/assets/js/start.js" type="text/javascript"></script>
   </body>
 </html>

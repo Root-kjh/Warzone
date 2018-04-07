@@ -20,7 +20,7 @@ if(!matchId($id)){
     die();
 }
 
-if(isset($id) && isset($pw) && pwChk($pw,$pwr)){
+if(isset($id,$pw) && pwChk($pw,$pwr)){
     SignUP($id,$pw,$comment);
     echo "<script> alert('$id 님! 회원가입이 성공적으로 처리되었습니다.');
             history.back();
