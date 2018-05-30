@@ -29,7 +29,7 @@ $users=AllUsers();
                             if($u[0]=="root")
                                 continue;
                     ?>
-                    <tr onclick="post_to_url('http://warzone.kro.kr/profile',{'id':'<?=$u[0]?>'});" class="rank_tr">
+                    <tr onclick="post_to_url('https://warzone.kro.kr/profile',{'id':'<?=$u[0]?>'});" class="rank_tr">
                     <th scope="row"><?=$i?></th>
                     <td><?=$u[0]?></td>
                     <td><?=$u[1]?></td>
