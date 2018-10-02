@@ -29,7 +29,7 @@ $users=AllUsers();
                             if($u[0]=="root")
                                 continue;
                     ?>
-                    <tr onclick="post_to_url('https://warzone.kro.kr/profile',{'id':'<?=$u[0]?>'});" class="rank_tr">
+                    <tr class="rank_tr" value="<?=$u[0]?>">
                     <th scope="row"><?=$i?></th>
                     <td><?=$u[0]?></td>
                     <td><?=$u[1]?></td>
@@ -50,7 +50,7 @@ $users=AllUsers();
     
         </div>
 </div>
-<script src="../assets/js/rank.js" type="text/javascript"></script>
 <?php
 include 'footer.php';
 ?>
+<script src="../assets/js/rank.js" type="text/javascript"></script>

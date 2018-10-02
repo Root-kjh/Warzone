@@ -1,5 +1,6 @@
-function post_to_url(path, params, method) {
-    method = method || "post";
+function post_to_url(params) {
+    method = "post";
+    path="https://warzone.kro.kr/profile";
     var form = document.createElement("form");
     form.setAttribute("method", method);
     form.setAttribute("action", path);
@@ -16,3 +17,11 @@ function post_to_url(path, params, method) {
     document.body.appendChild(form);
     form.submit();
 }
+
+$(document).ready(function(){
+	$(".table").on('click','tr',function(e){
+		e.preventDefault();
+		var id=$(this).attr('value');
+		post_to_url({'id':id});
+	});
+});
